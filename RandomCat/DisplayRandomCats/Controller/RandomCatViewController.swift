@@ -8,22 +8,30 @@
 import UIKit
 
 class RandomCatViewController: UIViewController {
+       
+    @IBOutlet var catView:CatView!
+        
+    var viewModel:CatsInfoViewModel = CatsInfoViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        catView.setUpUI()
+        viewModel.delegate = self
+        DispatchQueue.global().async { [self] in
+            viewModel.getCatsQuotesData()
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension RandomCatViewController:CatInfoViewModelDelegate {
+    func CatDataDisplay(catInfoModel: CatModel?) {
+        if let quotesData = catInfoModel,catInfoModel?.data != nil {
+            DispatchQueue.main.async {
+                self.catView.updateUI(details: quotesData)
+            }
+        }
     }
-    */
-
 }

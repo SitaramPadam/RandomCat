@@ -73,7 +73,6 @@ class APIWapperClass : NSObject {
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
         guard response is HTTPURLResponse else {return}
-        
             
             if error != nil {
                 completion(.failure(.noDataError))

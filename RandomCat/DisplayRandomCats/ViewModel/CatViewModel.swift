@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Protocols
 protocol CatInfoViewModelDelegate {
-    func CatDataDisplay(userInfoModel: [CatModel]?)
+    func CatDataDisplay(catInfoModel: CatModel?)
 }
 
 
@@ -24,8 +24,8 @@ class CatsInfoViewModel:CatsInfoServiceLayerDelegate {
         self.serviceLayer.getRandomCatQuotes()
     }
     
-    func responseOfRandomCatQuotes(data: [CatModel]?) {
-        delegate?.CatDataDisplay(userInfoModel: data)
+    func responseOfRandomCatQuotes(data: CatModel?) {
+        delegate?.CatDataDisplay(catInfoModel: data)
     }
     
 }
