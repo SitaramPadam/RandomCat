@@ -17,24 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WBW-ay-gSj">
-                                <rect key="frame" x="10" y="42" width="373" height="280"/>
+                                <rect key="frame" x="10" y="52" width="373" height="276"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="xSG-9j-dJu">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="260"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="256"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luE-gk-ncd">
-                                        <rect key="frame" x="0.0" y="280" width="373" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="276" width="373" height="0.0"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="igu-3H-JAZ"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lww-bS-a6P">
-                                <rect key="frame" x="20" y="342" width="353" height="40"/>
+                                <rect key="frame" x="20" y="348" width="353" height="40"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="j8c-pW-jzR"/>
@@ -51,7 +48,7 @@
                         <constraints>
                             <constraint firstItem="Lww-bS-a6P" firstAttribute="top" secondItem="WBW-ay-gSj" secondAttribute="bottom" constant="20" id="Ftm-QA-bAk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBW-ay-gSj" secondAttribute="trailing" constant="10" id="cGd-pC-yma"/>
-                            <constraint firstItem="WBW-ay-gSj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="42" id="fzB-tC-DKL"/>
+                            <constraint firstItem="WBW-ay-gSj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="52" id="fzB-tC-DKL"/>
                             <constraint firstItem="WBW-ay-gSj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jkt-kH-laj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lww-bS-a6P" secondAttribute="trailing" constant="20" id="r1x-pr-Zpo"/>
                             <constraint firstItem="Lww-bS-a6P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zXQ-yS-WCe"/>
@@ -91,7 +88,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PlaceHolder" width="512" height="512"/>
+        <image name="PlaceHolder" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

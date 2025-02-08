@@ -28,9 +28,9 @@ class RandomCatViewController: UIViewController {
 
 extension RandomCatViewController:CatInfoViewModelDelegate {
     func CatDataDisplay(catInfoModel: CatModel?) {
-        if let quotesData = catInfoModel,catInfoModel?.data != nil {
+        if let factsData = catInfoModel,catInfoModel?.data != nil {
             DispatchQueue.main.async {
-                self.catView.updateUI(details: quotesData)
+                self.catView.updateUI(details: factsData)
             }
         }
     }
