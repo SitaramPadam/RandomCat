@@ -20,7 +20,7 @@ class RandomCatViewController: UIViewController {
         catView.setUpUI()
         viewModel.delegate = self
         DispatchQueue.global().async { [self] in
-            viewModel.getCatsQuotesData()
+            viewModel.getCatFactsData()
         }
     }
 

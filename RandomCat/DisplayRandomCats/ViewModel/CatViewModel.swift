@@ -19,12 +19,12 @@ class CatsInfoViewModel:CatsInfoServiceLayerDelegate {
     var serviceLayer: CatsInfoServiceLayer = CatsInfoServiceLayer()
     var delegate: CatInfoViewModelDelegate? = nil
     
-    func getCatsQuotesData(){
+    func getCatFactsData(){
         self.serviceLayer.delegate = self
-        self.serviceLayer.getRandomCatQuotes()
+        self.serviceLayer.getRandomCatFacts()
     }
     
-    func responseOfRandomCatQuotes(data: CatModel?) {
+    func responseOfRandomCatFacts(data: CatModel?) {
         delegate?.CatDataDisplay(catInfoModel: data)
     }
     

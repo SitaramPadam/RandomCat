@@ -31,7 +31,7 @@ class CatView: UIView {
     @IBAction func onClickCatInfo(_sender : AnyObject){
         viewModel.delegate = self
         DispatchQueue.global().async { [self] in
-            viewModel.getCatsQuotesData()
+            viewModel.getCatFactsData()
         }
     }
 }

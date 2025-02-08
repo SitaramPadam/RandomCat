@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="40" id="j8c-pW-jzR"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Cat Info"/>
+                                <state key="normal" title="Check Out Cat Facts"/>
                                 <connections>
                                     <action selector="onClickCatInfoWith_sender:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="zsa-Dh-HOe"/>
                                 </connections>

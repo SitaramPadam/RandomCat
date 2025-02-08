@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Protocols
 protocol CatsInfoServiceLayerDelegate: AnyObject{
-    func responseOfRandomCatQuotes(data: CatModel?)
+    func responseOfRandomCatFacts(data: CatModel?)
 }
 
 class CatsInfoServiceLayer {
@@ -17,13 +17,13 @@ class CatsInfoServiceLayer {
     weak var delegate:CatsInfoServiceLayerDelegate?
     
     // MARK: - API Call
-    func getRandomCatQuotes() {
+    func getRandomCatFacts() {
         guard let requestUrl = URL(string: UrlStrings.catQuotesURL) else { return }
         APIWapperClass.shared.getCall(url: RequestURL(url:requestUrl), CatModel.self, nil) { [self] result in
             switch result {
             case .success(let model):
-                print(model)
-                delegate?.responseOfRandomCatQuotes(data: model)
+               // print(model)
+                delegate?.responseOfRandomCatFacts(data: model)
             case .failure(let error):
                 print(error)
             }

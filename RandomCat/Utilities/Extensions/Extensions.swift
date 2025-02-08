@@ -28,9 +28,4 @@ extension UIView {
     }
 }
 
-class Utility{
-    class func classNameAsString(_ obj: Any) -> String {
-        return String(describing: obj)
-    }
-}
 
