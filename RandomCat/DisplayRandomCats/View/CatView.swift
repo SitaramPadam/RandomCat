@@ -37,7 +37,7 @@ class CatView: UIView {
 }
 
 extension CatView:CatInfoViewModelDelegate {
-    func CatDataDisplay(catInfoModel: CatModel?) {
+    func catDataDisplay(catInfoModel: CatModel?) {
         if let quotesData = catInfoModel,catInfoModel?.data != nil {
             DispatchQueue.main.async {
                 self.updateUI(details: quotesData)

@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Protocols
 protocol CatInfoViewModelDelegate {
-    func CatDataDisplay(catInfoModel: CatModel?)
+    func catDataDisplay(catInfoModel: CatModel?)
 }
 
 
@@ -25,7 +25,6 @@ class CatsInfoViewModel:CatsInfoServiceLayerDelegate {
     }
     
     func responseOfRandomCatFacts(data: CatModel?) {
-        delegate?.CatDataDisplay(catInfoModel: data)
+        delegate?.catDataDisplay(catInfoModel: data)
     }
-    
 }

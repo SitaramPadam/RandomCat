@@ -29,4 +29,8 @@ class CatsInfoServiceLayer {
             }
         }
     }
+    
+    func getRandomCatImages() {
+        
+    }
 }
