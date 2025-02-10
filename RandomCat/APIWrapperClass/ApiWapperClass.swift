@@ -83,12 +83,6 @@ class APIWapperClass : NSObject {
                 return
             }
             
-            if let response = response as? HTTPURLResponse {
-                if response.statusCode == 404 || response.statusCode == 500 {
-                    completion(.failure(.noDataError) )
-                }
-            }
-
             if let data = data {
                 do {
                     let jsonDecoder = JSONDecoder()
