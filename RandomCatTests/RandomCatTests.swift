@@ -14,7 +14,7 @@ class MockCatsInfoServiceLayer: CatsInfoServiceLayer {
     weak var mockDelegate: CatsInfoServiceLayerDelegate?
     
     override func getRandomCatFacts() {
-        mockDelegate?.responseOfRandomCatFacts(data: mockData) // Simulating API response
+        mockDelegate?.responseOfRandomCatFacts(data: mockData)
     }
 }
 
@@ -26,7 +26,7 @@ class MockCatInfoViewModelDelegate: CatInfoViewModelDelegate {
     
     func catDataDisplay(catInfoModel: CatModel?) {
         receivedCatModel = catInfoModel
-        expectation?.fulfill() // Signal that async operation has completed
+        expectation?.fulfill()
     }
 }
 
@@ -56,18 +56,16 @@ final class RandomCatTests: XCTestCase {
     }
     
     func testGetCatFactsData_WhenCalled_ShouldTriggerDelegateWithData() {
-        // Given
+       
         let expectedFact = "Owning a cat can reduce the risk of stroke and heart attack by a third."
-        let mockCatModel = CatModel(data: [expectedFact]) // Replace with actual model properties
+        let mockCatModel = CatModel(data: [expectedFact])
         mockServiceLayer.mockData = mockCatModel
         
         let expectation = self.expectation(description: "Delegate should be called")
         mockDelegate.expectation = expectation
         
-        // When
         viewModel.getCatFactsData()
         
-        // Then
         waitForExpectations(timeout: 2.0) { _ in
             XCTAssertEqual(self.mockDelegate.receivedCatModel?.data[0], expectedFact, "Delegate did not receive expected cat fact")
         }
