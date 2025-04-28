@@ -13,7 +13,6 @@ protocol CatInfoViewModelDelegate {
     func catDataDisplay(catInfoModel: CatModel?)
 }
 
-
 class CatsInfoViewModel:CatsInfoServiceLayerDelegate {
    
     var serviceLayer: CatsInfoServiceLayer = CatsInfoServiceLayer()
